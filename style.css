@@ -257,7 +257,7 @@ section{
   gap: 1.4rem;
 }
 
-#projetos article{
+#projetos .card-projeto{
   padding: 1.4rem;
   border: 1px solid var(--borda);
   border-radius: var(--raio);
@@ -266,14 +266,26 @@ section{
   transition: transform .25s ease, background .25s ease, border-color .25s ease;
 }
 
-#projetos article:hover{
+#projetos .card-projeto:hover{
   transform: translateY(-6px);
   background: var(--superficie-hover);
   border-color: rgba(255,255,255,.14);
 }
 
+#projetos .card-projeto img{
+  width: 48px;
+  height: auto;
+  margin: 0 auto 16px;
+}
+
 #projetos h3{
   font-size: 18px;
+  margin-bottom: 8px;
+}
+
+#projetos p{
+  font-size: 14px;
+  color: var(--texto-suave);
 }
 
 /*contato*/
