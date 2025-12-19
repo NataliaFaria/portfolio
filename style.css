@@ -64,11 +64,13 @@ section{
 .cabecalho{
   position: sticky; /*fica no topo*/
   top: 0;
-  height: var(--altura-header);
+  min-height: var(--altura-header);
   z-index: 1000;
   background: rgba(14,17,22,.60);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--borda);
+  display: flex;
+  align-items: center;
 }
 
 .navegacao{
@@ -153,6 +155,12 @@ section{
 .grade{
   display: grid;
   gap: 1.4rem;
+}
+
+.titulo-secao{
+  font-size: clamp(1.6rem, 1.2rem + .9vw, 2.2rem);
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
 }
 
 /*habilidades*/
@@ -328,6 +336,16 @@ section{
 }
 
 /*responsivo*/
+@media (min-width: 1600px){
+  :root{
+    --container: 1400px;
+  }
+
+  body{
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 1024px){
   #habilidades .grade{
     grid-template-columns: repeat(2, minmax(0,1fr));
@@ -365,6 +383,9 @@ section{
 }
 
 @media (max-width: 768px){
+  .cabecalho{
+    min-height: auto;
+  }
   .navegacao{
     flex-direction: column;
     height: auto;
